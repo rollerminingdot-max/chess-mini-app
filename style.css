@@ -1,0 +1,90 @@
+:root {
+  --bg: #0b1220;
+  --card: #111b2e;
+  --text: #ffffff;
+  --blue: #1e90ff;
+}
+
+body.light {
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --text: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  padding: 16px;
+  text-align: center;
+  background: #0e1628;
+}
+
+.card {
+  margin: 16px;
+  padding: 16px;
+  background: var(--card);
+  border-radius: 12px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #555;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: .3s;
+}
+input:checked + .slider {
+  background: var(--blue);
+}
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+/* Theme buttons */
+.theme-buttons {
+  display: flex;
+  gap: 10px;
+}
+.theme-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+#darkBtn {
+  background: var(--blue);
+  color: white;
+}
